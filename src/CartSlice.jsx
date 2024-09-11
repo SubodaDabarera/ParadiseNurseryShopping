@@ -16,8 +16,8 @@ export const CartSlice = createSlice({
         }
     },
     removeItem: (state, action) => {
-        productName = action.payload
-        if(item){
+        const productName = action.payload
+        if(productName){
             state.items = state.items.filter(item => item.name != productName)
         }
     },
